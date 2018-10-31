@@ -1,0 +1,98 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     MAIN.answer
+006     lcd_init.i
+006     @PSTRINGC_9600_31766_31767.@SCRATCH1
+006     @PSTRINGC_676.@SCRATCH1
+007-00A lcd_init.LCD_INIT_STRING
+007     @PSTRINGC_9600_31766_31767.@SCRATCH2
+007     @PSTRINGC_676.@SCRATCH2
+008     lcd_putc.c
+009     lcd_gotoxy.x
+00A     lcd_gotoxy.y
+00B     lcd_gotoxy.address
+00B     @delay_ms1.P1
+00B     lcd_init.@SCRATCH1
+00C     lcd_gotoxy.@SCRATCH1
+00D     lcd_send_byte.address
+00E     lcd_send_byte.n
+00F     lcd_read_byte.low
+00F     lcd_send_byte.@SCRATCH1
+010     lcd_send_nibble.n
+010     lcd_read_byte.high
+011     lcd_read_byte.@SCRATCH1
+F83     lcd
+F83     PSP_DATA
+F8C     lcdlat
+F95     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const693.call
+000016  @const695.call
+000022  @const697.call
+00002E  @const698.call
+000038  @delay_ms1
+00005E  lcd_send_nibble
+000078  lcd_read_nibble
+000084  lcd_read_byte
+0000C2  lcd_send_byte
+0000FC  lcd_init
+000174  lcd_gotoxy
+000196  lcd_putc
+0001E6  @PSTRINGC_9600_31766_31767
+000208  @PSTRINGC_676
+000228  @cinit1
+000228  MAIN
+00024C  @cinit2
+
+Project Directory:
+    D:\respaldo_manuel\ITSA\2018_otoño\uC\picc\7B\p_usart\
+
+Project Files:
+    principal.c                                             [30-oct.-18 14:51  CRC=76401F22]
+    E:\Program Files (x86)\PICC\Devices\18F4550.h           [12-nov.-13 13:35  CRC=5337E248]
+    E:\Program Files (x86)\PICC\Drivers\lcd.c               [19-sep.-13 14:38  CRC=D1A6378A]
+
+Source signature=6CC4707E
+
+Units:
+    principal (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   principal.xsym
+    Errors:      principal.err
+    Ext Symbols: principal.esym
+    INHX32:      principal.hex
+    Symbols:     principal.sym
+    List:        principal.lst
+    Debug/COFF:  principal.cof
+    Project:     principal.ccspjt
+    Call Tree:   principal.tre
+    Statistics:  principal.STA

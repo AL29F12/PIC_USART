@@ -1,0 +1,22 @@
+#include <18F4550.h>
+#fuses NOWDT, NOPROTECT
+#use delay(internal=8Mhz)
+#use rs232(baud=9600, xmit=PIN_C6, rcv=PIN_C7)
+#include <lcd.c>
+#use standard_io(ALL)
+void main()
+{
+   lcd_init();
+   lcd_gotoxy(1,1);
+   printf(lcd_putc, "\f");
+   while(1)
+   {
+      if(input(PIN_A0))
+      {
+         printf("USART 7B");
+         printf(lcd_putc,"7B");
+         delay_ms(100);
+         printf(lcd_putc,"\f");
+      }
+   }
+}
